@@ -17,7 +17,7 @@ Our team was already able to complete the following:
 - [x] Fork this repository
 - [x] Create a named `vuex` module to hold your todos
 - [ ] Complete the CRUD features in the GUI and make sure they are reflected in the store
-- [ ] Make sure the `todo-list` component dynamically displays the todos
+- [x] Make sure the `todo-list` component dynamically displays the todos
 - [ ] Write concise commit messages
 - [ ] Submit a merge request and describe your changes precisely
 
