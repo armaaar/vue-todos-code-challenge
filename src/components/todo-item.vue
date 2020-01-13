@@ -22,14 +22,26 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
 import Todo, { TodoType } from '@/models/Todo';
 
+/**
+ * A todo item displayer
+ * @class
+ */
 @Component
 export default class App extends Vue  {
+  /**
+   * @prop {TodoType} todo - The todo item to be displayed
+   * @private
+   */
   @Prop()
   private todo!: TodoType
 
+  /**
+   * Toggles todo item completion on or off
+   * @method toggleTodoCompletion 
+   * @returns {void}
+   */
   toggleTodoCompletion (): void {
     Todo.update({
       where: this.todo.id,
@@ -39,6 +51,11 @@ export default class App extends Vue  {
     })
   }
 
+  /**
+   * Delete a todo item
+   * @method deleteTodo
+   * @returns {void}
+   */
   deleteTodo (): void {
     Todo.delete(this.todo.id)
   }

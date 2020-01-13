@@ -10,13 +10,25 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-
 import Todo from '@/models/Todo';
 
+/**
+ * Form used to add new todo items
+ * @class
+ */
 @Component
 export default class TodoForm extends Vue {
+  /**
+   * @var {String} newTodo - The new todo title to be added
+   * @default ""
+   */
   newTodo: String = ""
 
+  /**
+   * Add new todo item
+   * @method toggleTodoCompletion 
+   * @returns {void}
+   */
   addTodoItem ():void {
     if (this.newTodo !== "") {
       Todo.insert({
@@ -27,6 +39,3 @@ export default class TodoForm extends Vue {
   }
 }
 </script>
-
-<style lang="css">
-</style>
